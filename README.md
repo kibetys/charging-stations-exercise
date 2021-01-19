@@ -1,4 +1,4 @@
-# charging-stations-exercise-
+# charging-stations-exercise
 Small react application to display a list of charging stations parsed from JSON data. It's also possible to click a charging-station list item to view charging-station info
 
 # How to run locally
