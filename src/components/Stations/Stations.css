@@ -1,0 +1,10 @@
+
+.title {
+    color: rgb(34, 34, 34);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    height: 100px;
+    letter-spacing: -0.4px;
+    line-height: 100px;
+}

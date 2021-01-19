@@ -1,0 +1,49 @@
+
+.titleWrapper {
+    display: flex;
+    font-size: 48px;
+    font-weight: bold;
+    height: 100px;
+    letter-spacing: -0.4px;
+}
+
+.returnButton {
+    display: flex;
+    height: 50px;
+    margin-top: 25px;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+}
+
+.title {
+    margin-left: 25px;
+    display: flex;
+    color: rgb(34, 34, 34);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 100px;
+}
+
+.infoArea {
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 608px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infoTile {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    width: 100px;
+}
+
+.infoLabel {
+    display: flex;
+    color: rgb(95, 95, 95);
+}
+
+.infoValue {
+    display: flex;
+    color: rgb(34, 34, 34);
+}

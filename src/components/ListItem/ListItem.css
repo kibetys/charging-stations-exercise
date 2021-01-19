@@ -1,0 +1,27 @@
+.listItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    width: 608px;
+    border-radius: 8px;
+    height: 64px;
+    margin-top: 5px;
+    transition: transform .2s;
+}
+
+.listItem:hover {
+    transform: scale(1.05);
+}
+
+.listItemContent {
+    display: flex;
+}
+
+.stationName {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    margin-left: 5px;
+    display: flex;
+    flex: 1;
+}

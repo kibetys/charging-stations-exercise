@@ -1,0 +1,39 @@
+.labelWrapper {
+    background: rgb(242, 242, 242);
+    border-radius: 12px;
+    height: 24px;
+    width: 102px;
+    margin-right: 5px;
+}
+
+.labelContent {
+    padding-top: 4px;
+    padding-left: 9px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin-right: 5px;
+    height: 14px;
+    width: 14px;
+}
+
+.available {
+    color: rgb(0, 173, 9);
+}
+
+.offline {
+    color: rgb(255, 0, 0);
+}
+
+.statusText {
+    flex: 1;
+    color: rgb(34, 34, 34);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    height: 16px;
+    letter-spacing: 0px;
+    line-height: 16px;
+    width: 50px;  
+}
