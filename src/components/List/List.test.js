@@ -12,6 +12,7 @@ test('Renders <List /> component', () => {
     {
       name: 'test-item',
       available: 1,
+      station_ID: 101,
     },
   ]
   const wrapper = shallow(<List items={items} onListItemClick={() => {}} />)
@@ -23,10 +24,12 @@ test('Renders expected amount of <ListItem /> components', () => {
     {
       name: 'test-item',
       available: 1,
+      station_ID: 102,
     },
     {
       name: 'test-item-2',
       available: 0,
+      station_ID: 103,
     },
   ]
   const wrapper = shallow(<List items={items} onListItemClick={() => {}} />)
@@ -39,6 +42,7 @@ test('Should call onListItemClick when click event is simulated', () => {
     {
       name: 'test-item',
       available: 1,
+      station_ID: 101,
     },
   ]
   const onListItemClick = jest.fn()

@@ -4,7 +4,14 @@ import ListItem from '../ListItem/ListItem'
 
 const List = ({ onListItemClick, items }) => (
   <div>
-    {items.map((item) => (<ListItem key={item.name} name={item.name} available={item.available} onClick={() => onListItemClick(item)} />))}
+    {items.map((item) => (
+      <ListItem
+        key={item.station_ID}
+        name={item.name}
+        available={item.available}
+        onClick={() => onListItemClick(item.station_ID)}
+      />
+    ))}
   </div>
 )
 

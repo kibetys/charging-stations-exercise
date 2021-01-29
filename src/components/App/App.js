@@ -1,26 +1,16 @@
 import React, { useState } from 'react'
-import Stations from '../Stations/Stations'
-import StationInfo from '../StationInfo/StationInfo'
+import Content from '../Content/Content'
 import './App.css'
 
 const App = () => {
-  const [selectedStation, setSelectedStation] = useState({})
+  const [selectedStationId, setSelectedStationId] = useState('')
 
-  const onReturnButtonClick = () => setSelectedStation({})
-  const onListItemClick = (row) => setSelectedStation(row)
-
-  // assume that if station_ID can be read from selectedStation object
-  // a station has been selected and station info should be displayed
-  // otherwise display a list of charging stations
-  const isStationSelected = Boolean(selectedStation.station_ID)
+  const onReturnButtonClick = () => setSelectedStationId('')
+  const onListItemClick = (id) => setSelectedStationId(id)
 
   return (
     <div className="content">
-      {
-      isStationSelected
-        ? <StationInfo name={selectedStation.name} stationData={{ ...selectedStation }} onReturnButtonClick={onReturnButtonClick} />
-        : <Stations onListItemClick={onListItemClick} />
-      }
+      <Content selectedStationId={selectedStationId} onReturnButtonClick={onReturnButtonClick} onListItemClick={onListItemClick} />
     </div>
   )
 }
