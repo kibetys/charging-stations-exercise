@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { ReactElement } from 'react'
 import { useQuery, gql } from '@apollo/client'
 import './StationInfo.css'
 
@@ -13,15 +12,25 @@ const GET_STATION_BY_ID_QUERY = gql`
   }
 `
 
-const StationInfo = ({ id, onReturnButtonClick }) => {
+interface Props {
+  readonly id: number,
+  readonly onReturnButtonClick: () => void
+}
+
+interface StationData {
+  name: string
+}
+
+const StationInfo = ({ id, onReturnButtonClick }: Props): JSX.Element => {
   const { loading, error, data } = useQuery(GET_STATION_BY_ID_QUERY, {
     variables: { station_ID: id },
   })
 
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>{error.message}</div>
+
   const { getStationById } = data
-  const stationData = getStationById
+  const stationData: StationData = getStationById
   return (
     <div>
       <div className="titleWrapper">
@@ -29,7 +38,7 @@ const StationInfo = ({ id, onReturnButtonClick }) => {
         <div className="title">{stationData.name}</div>
       </div>
       <div className="infoArea">
-        {Object.entries(stationData).map(([label, value]) => (
+        {Object.entries(stationData).map(([label, value]): ReactElement => (
           <div key={label} className="infoTile">
             <div className="infoLabel">{label}</div>
             <div className="infoValue">{value}</div>
@@ -38,11 +47,6 @@ const StationInfo = ({ id, onReturnButtonClick }) => {
       </div>
     </div>
   )
-}
-
-StationInfo.propTypes = {
-  id: PropTypes.number.isRequired,
-  onReturnButtonClick: PropTypes.func.isRequired,
 }
 
 export default StationInfo

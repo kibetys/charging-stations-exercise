@@ -1,10 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './Label.css'
 
-const Label = ({ available }) => {
-  const iconName = available ? 'glyphicon glyphicon-ok-sign' : 'glyphicon glyphicon-ban-circle'
-  const iconColorClassName = available ? 'available' : 'offline'
+interface Props {
+  available: number
+}
+
+const Label = ({ available }: Props) => {
+  const iconName: string = available ? 'glyphicon glyphicon-ok-sign' : 'glyphicon glyphicon-ban-circle'
+  const iconColorClassName: string = available ? 'available' : 'offline'
   return (
     <div className="labelWrapper">
       <div className="labelContent">
@@ -15,10 +18,6 @@ const Label = ({ available }) => {
       </div>
     </div>
   )
-}
-
-Label.propTypes = {
-  available: PropTypes.number.isRequired,
 }
 
 export default Label

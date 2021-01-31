@@ -2,7 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ListItem from '../ListItem/ListItem'
 
-const List = ({ onListItemClick, items }) => (
+interface ListItem {
+  station_ID: number,
+  name: string,
+  available: number
+}
+
+interface Props {
+  onListItemClick: (id: number) => void,
+  items: Array<ListItem>
+}
+
+const List = ({ onListItemClick, items }: Props) => (
   <div>
     {items.map((item) => (
       <ListItem

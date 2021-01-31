@@ -1,9 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Label from '../Label/Label'
 import './ListItem.css'
 
-const ListItem = ({ name, available, onClick }) => (
+interface Props {
+  readonly name: string,
+  readonly available: number,
+  onClick: () => void
+}
+
+const ListItem = ({ name, available, onClick }: Props) => (
   <div className="listItem" onClick={onClick} aria-hidden="true">
     <div className="listItemContent">
       <div className="stationName">{name}</div>
@@ -11,11 +16,5 @@ const ListItem = ({ name, available, onClick }) => (
     </div>
   </div>
 )
-
-ListItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  available: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
-}
 
 export default ListItem
