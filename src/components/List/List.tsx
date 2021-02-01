@@ -13,7 +13,7 @@ interface Props {
   items: Array<ListItem>
 }
 
-const List = ({ onListItemClick, items }: Props) => (
+const List = ({ onListItemClick, items }: Props): JSX.Element => (
   <div>
     {items.map((item) => (
       <ListItem

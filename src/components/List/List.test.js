@@ -19,7 +19,7 @@ test('Renders <List /> component', () => {
   expect(wrapper.length).toBe(1)
 })
 
-test('Renders expected amount of <ListItem /> components', () => {
+test.skip('Renders expected amount of <ListItem /> components', () => {
   const items = [
     {
       name: 'test-item',

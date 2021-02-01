@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Content from '../Content/Content'
 import './App.css'
 
-const App = () => {
+const App = (): JSX.Element => {
 
-  const [state, setState] = useState<{id: null | number}>({ id: null });
+  const [state, setState] = useState<{id: null | number}>({ id: null })
 
   const setId = (id: number) => {
     setState(prevState => ({ ...prevState, id }))

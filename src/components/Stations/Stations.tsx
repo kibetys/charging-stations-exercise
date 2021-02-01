@@ -4,7 +4,7 @@ import { useQuery, gql } from '@apollo/client'
 import List from '../List/List'
 import './Stations.css'
 
-const GET_ALL_STATIONS_QUERY = gql`
+export const GET_ALL_STATIONS_QUERY = gql`
 query  {
 getAllStations {
     station_ID
@@ -28,6 +28,7 @@ const Stations = ({ onListItemClick }: Props): JSX.Element => {
   if (error) return <div>{error.message}`</div>
 
   const { getAllStations } = data
+
   return (
     <div className="stationsListWrapper">
       <div className="title">

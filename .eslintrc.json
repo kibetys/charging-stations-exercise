@@ -9,15 +9,15 @@
       "plugins": [
         "@typescript-eslint"
       ],
-    // "rules": {
-    //     "semi": ["error", "never"],
-    //     "quotes": ["error", "single"],
-    //     "react/jsx-filename-extension": 0,
-    //     "import/extensions": 0,
-    //     "max-len": ["error", 150]
-    // },
-    // "env": {
-    //     "browser": true,
-    //     "jest": true
-    // }
+    "rules": {
+        "semi": ["error", "never"],
+        "quotes": ["error", "single"],
+        "react/jsx-filename-extension": 0,
+        "import/extensions": 0,
+        "max-len": ["error", 150]
+    },
+    "env": {
+        "browser": true,
+        "jest": true
+    }
 }

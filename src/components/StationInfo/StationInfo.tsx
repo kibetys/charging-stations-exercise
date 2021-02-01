@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { useQuery, gql } from '@apollo/client'
 import './StationInfo.css'
 
-const GET_STATION_BY_ID_QUERY = gql`
+export const GET_STATION_BY_ID_QUERY = gql`
   query ($station_ID: Int!) {
     getStationById(station_ID: $station_ID) {
       station_ID
@@ -22,7 +22,7 @@ interface StationData {
 }
 
 const StationInfo = ({ id, onReturnButtonClick }: Props): JSX.Element => {
-  const { loading, error, data } = useQuery(GET_STATION_BY_ID_QUERY, {
+  const { loading, error, data = {} } = useQuery(GET_STATION_BY_ID_QUERY, {
     variables: { station_ID: id },
   })
 

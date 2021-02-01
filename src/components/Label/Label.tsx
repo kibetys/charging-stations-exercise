@@ -5,7 +5,7 @@ interface Props {
   available: number
 }
 
-const Label = ({ available }: Props) => {
+const Label = ({ available }: Props): JSX.Element => {
   const iconName: string = available ? 'glyphicon glyphicon-ok-sign' : 'glyphicon glyphicon-ban-circle'
   const iconColorClassName: string = available ? 'available' : 'offline'
   return (

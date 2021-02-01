@@ -8,7 +8,7 @@ interface Props {
   onClick: () => void
 }
 
-const ListItem = ({ name, available, onClick }: Props) => (
+const ListItem = ({ name, available, onClick }: Props): JSX.Element => (
   <div className="listItem" onClick={onClick} aria-hidden="true">
     <div className="listItemContent">
       <div className="stationName">{name}</div>

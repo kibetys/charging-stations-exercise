@@ -13,7 +13,7 @@ const Content = ({ selectedStationId, onListItemClick, onReturnButtonClick }: Pr
   return (
     <div className="content">
       {
-      selectedStationId !== null
+      selectedStationId !== null && selectedStationId !== undefined
         ? <StationInfo id={selectedStationId} onReturnButtonClick={onReturnButtonClick} />
         : <Stations onListItemClick={onListItemClick} />
       }
