@@ -2,7 +2,8 @@
 Small react application to display a list of charging stations parsed from JSON data. It's also possible to click a charging-station list item to view charging-station info
 
 Tech Choices:
-* React V17, functional components and hooks, PropTypes
+* React V16, functional components and hooks, Typescript,
+* React Apollo & Graphql
 * Jest and Enzyme
 * Webpack
 
